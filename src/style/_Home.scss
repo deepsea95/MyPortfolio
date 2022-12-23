@@ -1,0 +1,58 @@
+section {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 100px;
+	height: 80vh;
+
+	.title {
+		font-size: 65px;
+		margin-bottom: 40px;
+	}
+
+	.subtitle {
+		margin-bottom: 40px;
+	}
+
+	.icon {
+		display: flex;
+		flex-direction: column;
+		gap: 35px;
+		cursor: pointer;
+	}
+
+	.avatar {
+		border-radius: 50%;
+	}
+}
+
+@media all and (max-width: 1024px) {
+	section {
+		gap: 50px;
+	}
+}
+
+@media all and (max-width: 414px) {
+	section {
+		flex-direction: column-reverse;
+		text-align: center;
+		.icon {
+			flex-direction: row;
+		}
+		.avatar{
+			width: 150px;
+			height: 150px;
+		}
+		.title{
+			margin-bottom: 0;
+		}
+		.subtitle{
+			margin-top: 20px;
+			margin-bottom: 0;
+		}
+		p{
+			margin-top: 20px;
+			margin-bottom: 0;
+		}
+	}
+}

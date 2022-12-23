@@ -1,0 +1,27 @@
+.about-title{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 30px;
+}
+
+.about-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 80vh;
+    gap: 50px;
+    .avatar-img {
+        border-radius: 25px;
+    }
+}
+
+@media all and (max-width: 540px) {
+	.about-section {
+		flex-direction: column;
+		text-align: center;
+        .about-container{
+            flex-direction: column;
+        }
+	}
+}
