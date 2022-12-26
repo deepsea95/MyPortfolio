@@ -1,18 +1,25 @@
 import { FiFileText } from 'react-icons/fi';
+import CV from '../Assets/CV - Angelo De Rosa.pdf';
 
 function AboutCard() {
 	return (
-		<div className='container about-section'>
-			<h1 className='about-title'>About Me</h1>
+		<div className="container about-section">
+			<h1 className="about-title">Riguardo me</h1>
 			<div className="about-container">
 				<img src="https://via.placeholder.com/330" className="avatar-img" />
 				<div>
 					<p style={{ marginBottom: '50px' }}>
-						Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum
+						Jr Full Stack Web - amante della tecnologia , dei PC e dei videogame. <br/> Dopo aver lavorato per
+						anni in vari ambiti ho deciso di dare una svolta alla mia vita, dedicandomi allo studio dello
+						sviluppo web acquisendo quindi nuove competenze, formandomi tramite un corso intensivo proposto
+						da Develhope, nel quale ho imparato lo sviluppo FE/BE/FS, con Html, CSS, SASS, Javascript, ad
+						utilizzare Git e ho acquisito le competenze necessarie su TypeScript. Nella seconda parte ho
+						approfondito tutti gli elementi essenziali per sviluppare software in React e ho sviluppato una
+						vera applicazione web con metodologie agile.
 					</p>
-					<button type="button" className="btn btn-light btn-lg">
+					<a download="" href={CV} className="BTN">
 						Download CV <FiFileText size="25px" />
-					</button>
+					</a>
 				</div>
 			</div>
 		</div>

@@ -2,6 +2,7 @@
 @import './style/Home';
 @import './style/ImgCard';
 @import './style/Skills';
+@import './style/Qualification';
 
 * {
 	box-sizing: border-box;
@@ -9,17 +10,43 @@
 	margin: 0;
 }
 
-body {
-	background-color: black !important;
-    color: white !important;
+.light-mode {
+	--bs-body-bg: white !important;
+	--bs-body-color: #2a2a2a !important;
+	--bs-link-color: #2a2a2a !important;
+	--bs-link-hover-color: rgba(245, 245, 245, 0.877) !important;
+	--clr-primary: #2a2a2a !important;
+	--clr-text: white !important;
 }
+
+.dark-mode {
+	--bs-body-bg: black !important;
+	--bs-body-color: white !important;
+	--bs-link-color: white !important;
+	--bs-link-hover-color: rgba(245, 245, 245, 0.877) !important;
+	--clr-primary: white !important;
+	--clr-text: black !important;
+
+	--bs-navbar-color: white !important;
+	--bs-nav-link-color: white !important;
+	--bs-navbar-hover-color: rgba(245, 245, 245, 0.877) !important;
+	--bs-nav-link-hover-color: rgba(245, 245, 245, 0.877) !important;
+}
+
+.BTN {
+	border: none;
+	padding: 0.4rem 1.25rem;
+	border-radius: 7px;
+	height: 35px;
+	background-color: var(--clr-primary);
+	color: var(--clr-text);
+}
+
+// .BTN:hover {
+// 	background-color: var(--clr-text);
+// 	color: var(--clr-primary);
+// }
 
 a {
 	text-decoration: none !important;
-	color: white !important;
-}
-
-a:hover{
-	color: rgba(245, 245, 245, 0.877) !important;
-	transition: 0.3s;
 }
