@@ -16,7 +16,7 @@ function QualificationComponent() {
 					<div className="job-content two">
 						<h5>Volontario</h5>
 						<span>
-							Dipartimento per le politiche giovanili <br /> e del Servizio Civile Universale
+							Dipartimento per le politiche <br/> giovanili e del Servizio <br/> Civile Universale
 						</span>
 						<span className="mt-2">30/04/2021 - 30/04/2022</span>
 					</div>

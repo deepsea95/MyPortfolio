@@ -41,13 +41,25 @@ function Footer() {
 		<div>
 			<hr style={{ width: '100%' }} />
 
-			<div>
+			<div className='p-4 '>
+				<select>
+					<option>prova</option>
+					<option>prova</option>
+					<option>prova</option>
+				</select>
+				
 				{theme === 'light-mode' ? (
-					<button style={{ backgroundColor: 'transparent', border: 'none', padding:'15px'}} onClick={cambiaTema}>
+					<button
+						style={{ backgroundColor: 'transparent', border: 'none', marginLeft:'15px'}}
+						onClick={cambiaTema}
+					>
 						<MdOutlineDarkMode color="black" size="30" />
 					</button>
 				) : (
-					<button style={{ backgroundColor: 'transparent', border: 'none', padding:'15px'}} onClick={cambiaTema}>
+					<button
+						style={{ backgroundColor: 'transparent', border: 'none', marginLeft:'15px'}}
+						onClick={cambiaTema}
+					>
 						<MdOutlineLightMode color="white" size="30" />
 					</button>
 				)}

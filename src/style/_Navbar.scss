@@ -1,7 +1,29 @@
-.navbar {
-	display: flex;
-	color: var(--bs-navbar-color) !important;
-	.nav-link {
-		color: var(--bs-nav-link-color) !important;
+.navbar{
+	.navbar-toggler {
+		border: none !important;
+	}
+	.offcanvas {
+		padding: 20px;
+		// background-color: var(--bs-offcanvas-bg);
+
+		// .navbar-brand {
+		// 	color: var(--bs-navbar-brand-color);
+		// }
+	}
+	.navbar-nav{
+		display: flex;
+		justify-content: flex-end;
+		.nav-link {
+			color: var(--nav-link-color);
+			// .active {
+			// 	color: var(--bs-navbar-active-color);
+			// }
+		}
+		.nav-link:hover {
+			color: var(--nav-link-hover-color);
+		}
 	}
 }
+
+
+

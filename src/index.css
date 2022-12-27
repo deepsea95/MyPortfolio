@@ -1,9 +1,18 @@
-.navbar {
-  display: flex;
-  color: var(--bs-navbar-color) !important;
+.navbar .navbar-toggler {
+  border: none !important;
 }
-.navbar .nav-link {
-  color: var(--bs-nav-link-color) !important;
+.navbar .offcanvas {
+  padding: 20px;
+}
+.navbar .navbar-nav {
+  display: flex;
+  justify-content: flex-end;
+}
+.navbar .navbar-nav .nav-link {
+  color: var(--nav-link-color);
+}
+.navbar .navbar-nav .nav-link:hover {
+  color: var(--nav-link-hover-color);
 }
 
 section {
@@ -35,7 +44,7 @@ section .avatar {
     gap: 50px;
   }
 }
-@media all and (max-width: 414px) {
+@media all and (max-width: 912px) {
   section {
     flex-direction: column-reverse;
     text-align: center;
@@ -44,6 +53,7 @@ section .avatar {
     flex-direction: row;
   }
   section .avatar {
+    margin-top: 50px;
     width: 150px;
     height: 150px;
   }
@@ -59,6 +69,11 @@ section .avatar {
     margin-bottom: 0;
   }
 }
+@media all and (max-width: 412px) {
+  section {
+    height: auto;
+  }
+}
 .about-title {
   display: flex;
   align-items: center;
@@ -70,20 +85,36 @@ section .avatar {
   display: flex;
   align-items: center;
   justify-content: space-around;
-  height: 100vh;
+  height: 80vh;
   gap: 50px;
 }
 .about-container .avatar-img {
   border-radius: 25px;
 }
 
-@media all and (max-width: 540px) {
+@media all and (max-width: 912px) {
   .about-section {
     flex-direction: column;
     text-align: center;
   }
   .about-section .about-container {
     flex-direction: column;
+    height: 65vh;
+  }
+}
+@media all and (max-width: 540px) {
+  .about-section .about-container {
+    flex-direction: column;
+    height: auto;
+  }
+}
+@media all and (max-width: 375px) {
+  .about-section .about-container {
+    flex-direction: column;
+    height: auto;
+  }
+  .about-section .about-container .avatar-img {
+    width: 75%;
   }
 }
 .skills-section {
@@ -101,7 +132,6 @@ section .avatar {
 .skills-section .card .skills-container .skills-content {
   display: flex;
   align-items: center;
-  justify-content: center;
   gap: 10px;
 }
 
@@ -114,7 +144,7 @@ section .avatar {
 }
 .job-section .job-container {
   display: grid;
-  grid-template-columns: 1fr 0.5fr 1fr;
+  grid-template-columns: 1fr 0fr 1fr;
   grid-template-rows: repeat(4, 1fr);
 }
 .job-section .job-container .job-content {
@@ -122,6 +152,7 @@ section .avatar {
   flex-direction: column;
 }
 .job-section .job-container .one {
+  margin-right: 30px;
   grid-column: 1;
   grid-row: 1;
 }
@@ -130,6 +161,8 @@ section .avatar {
   grid-row: 1;
 }
 .job-section .job-container .two {
+  text-align: right;
+  margin-left: 30px;
   grid-column: 3/3;
   grid-row: 2;
 }
@@ -138,6 +171,7 @@ section .avatar {
   grid-row: 2;
 }
 .job-section .job-container .three {
+  margin-right: 30px;
   grid-column: 1;
   grid-row: 3;
 }
@@ -158,6 +192,17 @@ section .avatar {
   height: 100%;
   background-color: var(--clr-primary);
   transform: translate(6px, -7px);
+}
+
+select {
+  background-color: transparent;
+  color: var(--select-color);
+  border-radius: 5px;
+  padding: 3px;
+  cursor: pointer;
+}
+select option {
+  background-color: var(--option-color-bg);
 }
 
 footer {
@@ -186,16 +231,12 @@ footer .icon-footer {
 }
 
 .light-mode {
-  --bs-body-bg: white;
-  --bs-body-color: #2a2a2a !important;
   --bs-link-color: #2a2a2a !important;
   --bs-link-hover-color: #1a1a1abe !important;
   --clr-primary: #2a2a2a !important;
   --clr-text: white !important;
-  --bs-navbar-color: white !important;
-  --bs-navbar-hover-color: rgba(245, 245, 245, 0.877) !important;
-  --bs-nav-link-color: #2a2a2a !important;
-  --bs-nav-link-hover-color:#1a1a1abe !important;
+  --nav-link-color: #2a2a2a;
+  --nav-link-hover-color: #1a1a1abe;
 }
 
 .dark-mode {
@@ -205,10 +246,8 @@ footer .icon-footer {
   --bs-link-hover-color: rgba(245, 245, 245, 0.877) !important;
   --clr-primary: white !important;
   --clr-text: black !important;
-  --bs-navbar-color: white !important;
-  --bs-nav-link-color: white !important;
-  --bs-navbar-hover-color: rgba(245, 245, 245, 0.877) !important;
-  --bs-nav-link-hover-color: rgba(245, 245, 245, 0.877) !important;
+  --select-color: white;
+  --option-color-bg: black;
 }
 
 .BTN {

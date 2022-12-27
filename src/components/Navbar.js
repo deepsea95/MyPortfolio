@@ -2,23 +2,22 @@ import { Link } from 'react-router-dom';
 
 function Navbar() {
 	return (
-		<nav className="navbar navbar-expand-lg ">
+		<nav className="navbar navbar-dark navbar-expand-lg">
 			<div className="container-fluid">
 				<Link to="/" className="navbar-brand">
 					Angelo
 				</Link>
 				<button
 					className="navbar-toggler"
+					// aria-label="Toggle navigation"
 					type="button"
-					data-bs-toggle="collapse"
-					data-bs-target="#navbarNav"
-					aria-controls="navbarNav"
-					aria-expanded="false"
-					aria-label="Toggle navigation"
+					data-bs-toggle="offcanvas"
+					data-bs-target="#offcanvasTop"
+					aria-controls="offcanvasTop"
 				>
 					<span className="navbar-toggler-icon" />
 				</button>
-				<div className="collapse navbar-collapse position-absolute end-0" id="navbarNav">
+				<div className="offcanvas offcanvas-top  text-bg-dark" tabindex="-1" id="offcanvasTop" aria-labelledby="offcanvasTopLabel">
 					<ul className="navbar-nav">
 						<li className="nav-item">
 							<Link to="/" className="nav-link active" aria-current="page">

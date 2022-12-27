@@ -1,3 +1,14 @@
+select{
+    background-color: transparent;
+    color: var(--select-color);
+    border-radius: 5px;
+    padding: 3px;
+    cursor: pointer;
+    option{
+        background-color: var(--option-color-bg);
+    }
+}
+
 footer{
     display: flex;
     flex-direction: column;
