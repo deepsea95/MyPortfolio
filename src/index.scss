@@ -3,6 +3,7 @@
 @import './style/ImgCard';
 @import './style/Skills';
 @import './style/Qualification';
+@import './style/Footer';
 
 * {
 	box-sizing: border-box;
@@ -11,12 +12,19 @@
 }
 
 .light-mode {
-	--bs-body-bg: white !important;
+	--bs-body-bg: white;
 	--bs-body-color: #2a2a2a !important;
 	--bs-link-color: #2a2a2a !important;
-	--bs-link-hover-color: rgba(245, 245, 245, 0.877) !important;
+	--bs-link-hover-color: #1a1a1abe !important;
 	--clr-primary: #2a2a2a !important;
 	--clr-text: white !important;
+
+	--bs-navbar-color: white !important;
+	--bs-navbar-hover-color: rgba(245, 245, 245, 0.877) !important;
+	--bs-nav-link-color: #2a2a2a !important;
+	--bs-nav-link-hover-color:#1a1a1abe !important;
+
+	
 }
 
 .dark-mode {
@@ -50,3 +58,4 @@
 a {
 	text-decoration: none !important;
 }
+

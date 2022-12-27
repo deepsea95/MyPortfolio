@@ -1,8 +1,7 @@
-.navbar-dark {
+.navbar {
 	display: flex;
-	.container-fluid {
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
+	color: var(--bs-navbar-color) !important;
+	.nav-link {
+		color: var(--bs-nav-link-color) !important;
 	}
 }

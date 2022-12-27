@@ -1,40 +1,8 @@
-import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 
-const getFromLocalStorage = () => {
-	if (localStorage.getItem('theme')) {
-		return localStorage.getItem('theme');
-	} else {
-		return 'light-mode';
-	}
-};
-
 function Navbar() {
-	//Stato iniziale per la nostra modalità
-	const [ theme, setTheme ] = useState(getFromLocalStorage());
-
-	//Cambia il valore dello state theme
-	const cambiaTema = () => {
-		if (theme === 'light-mode') {
-			setTheme('dark-mode');
-		} else {
-			setTheme('light-mode');
-		}
-	};
-
-	useEffect(
-		() => {
-			//Attacca classe al html tag
-			document.documentElement.className = theme;
-
-			//inserisco valore di theme nel localStorage ogni volta viene mutato il suo state
-			localStorage.setItem('theme', theme);
-		},
-		[ theme ]
-	);
-
 	return (
-		<nav className="navbar navbar-expand-lg">
+		<nav className="navbar navbar-expand-lg ">
 			<div className="container-fluid">
 				<Link to="/" className="navbar-brand">
 					Angelo
@@ -50,8 +18,7 @@ function Navbar() {
 				>
 					<span className="navbar-toggler-icon" />
 				</button>
-				<div className="collapse navbar-collapse" id="navbarNav">
-					<button className='BTN' onClick={cambiaTema}></button>
+				<div className="collapse navbar-collapse position-absolute end-0" id="navbarNav">
 					<ul className="navbar-nav">
 						<li className="nav-item">
 							<Link to="/" className="nav-link active" aria-current="page">

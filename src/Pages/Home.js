@@ -2,6 +2,7 @@ import React from 'react';
 import Navbar from '../components/Navbar';
 import { CiLinkedin } from 'react-icons/ci';
 import { VscGithubAlt } from 'react-icons/vsc';
+import Footer from '../components/Footer';
 
 function Home() {
 	return (
@@ -27,6 +28,7 @@ function Home() {
 				</div>
 				<img className="avatar" src="https://via.placeholder.com/330" />
 			</section>
+			<Footer />
 		</React.Fragment>
 	);
 }

@@ -4,7 +4,7 @@ function SkillsCard() {
 	return (
 		<div>
             <h1 className='d-flex justify-content-center mb-5'>Competenze</h1>
-			<div className="d-flex justify-content-center" style={{ gap: '30px', flexWrap: 'wrap' }}>
+			<div className="skills-section d-flex justify-content-center" style={{ gap: '30px', flexWrap: 'wrap' }}>
 				<div>
 					<div className="card shadow p-3 mb-5" style={{ borderRadius: '0' }}>
 						<div className="card-body">
