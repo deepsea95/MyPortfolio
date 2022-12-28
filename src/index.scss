@@ -20,9 +20,9 @@
 	--clr-text: white !important;
 	--nav-link-color: #2a2a2a;
 	--nav-link-hover-color: #1a1a1abe;
-
-	// --bs-navbar-active-color:  #2a2a2a !important;
-	// --bs-offcanvas-bg: red !important;
+	--navColor-bg: white;
+	--navColor-text: black;
+	--textColor-btn: black;
 }
 
 .dark-mode {
@@ -34,15 +34,12 @@
 	--clr-text: black !important;
 	--select-color: white;
 	--option-color-bg: black;
+	--textColor-btn: white;
+	--navColor-bg: black;
+	--navColor-text: white;
+
 	// --nav-link-color: white;
 	// --nav-link-hover-color: rgba(245, 245, 245, 0.877);
-
-	// --bs-navbar-toggler-icon-bg: url(data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'><path stroke='rgba%28255, 255, 255, 0.55%29'
-	// 	stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/></svg>) !important;
-
-	
-	// --bs-navbar-active-color: white !important;
-	// --bs-navbar-brand-color: white !important;
 }
 
 .BTN {

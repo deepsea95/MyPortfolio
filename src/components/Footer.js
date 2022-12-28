@@ -43,9 +43,9 @@ function Footer() {
 
 			<div className='p-4 '>
 				<select>
-					<option>prova</option>
-					<option>prova</option>
-					<option>prova</option>
+					<option>Italiano</option>
+					{/* <option>English</option>
+					<option>Français</option> */}
 				</select>
 				
 				{theme === 'light-mode' ? (
