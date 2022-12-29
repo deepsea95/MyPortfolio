@@ -11,8 +11,12 @@
     justify-content: space-around;
     height: 80vh;
     gap: 50px;
-    .avatar-img {
-        border-radius: 25px;
+    .avatar-about{
+        // border-radius: 25px;
+        width: 30%;
+    }
+    .cv-BTN:hover{
+        color: var(--cvBTN-color);
     }
 }
 
@@ -41,9 +45,6 @@
         .about-container{
             flex-direction: column;
             height: auto;
-            .avatar-img {
-                width: 75%;
-            }
         }
 	}
 }

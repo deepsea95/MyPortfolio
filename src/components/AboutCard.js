@@ -1,12 +1,13 @@
 import { FiFileText } from 'react-icons/fi';
 import CV from '../Assets/CV - Angelo De Rosa.pdf';
+import ImgProfile from '../Assets/profile-pic.png';
 
 function AboutCard() {
 	return (
 		<div className="container about-section">
 			<h1 className="about-title">Riguardo me</h1>
 			<div className="about-container">
-				<img src="https://via.placeholder.com/330" className="avatar-img" />
+				<img src={ImgProfile} className="avatar-about" alt='img-profile'/>
 				<div>
 					<p style={{ marginBottom: '50px' }}>
 						Jr Full Stack Web - amante della tecnologia , dei PC e dei videogame. <br/> Dopo aver lavorato per
@@ -17,7 +18,7 @@ function AboutCard() {
 						approfondito tutti gli elementi essenziali per sviluppare software in React e ho sviluppato una
 						vera applicazione web con metodologie agile.
 					</p>
-					<a download="" href={CV} className="BTN">
+					<a download="" href={CV} className="BTN cv-BTN">
 						Download CV <FiFileText size="25px" />
 					</a>
 				</div>

@@ -3,6 +3,7 @@ import Navbar from '../components/Navbar';
 import { CiLinkedin } from 'react-icons/ci';
 import { VscGithubAlt } from 'react-icons/vsc';
 import Footer from '../components/Footer';
+import ImgProfile from '../Assets/profile-pic.png';
 
 function Home() {
 	return (
@@ -10,11 +11,11 @@ function Home() {
 			<Navbar />
 			<section className="container">
 				<div className="icon">
-					<a href="https://www.linkedin.com/in/angelo-de-rosa-">
+					<a href="https://www.linkedin.com/in/angelo-de-rosa-"  target="_blank" rel="noreferrer">
 						<CiLinkedin size="25" />
 					</a>
 
-					<a href="https://github.com/deepsea95">
+					<a href="https://github.com/deepsea95"  target="_blank" rel="noreferrer">
 						<VscGithubAlt size="25" />
 					</a>
 				</div>
@@ -26,7 +27,7 @@ function Home() {
 						e sono molto appassionato e dedito al mio lavoro.
 					</p>
 				</div>
-				<img className="avatar" src="https://via.placeholder.com/330" />
+				<img className="avatar" src={ImgProfile} alt='img-profile'/>
 			</section>
 			<Footer />
 		</React.Fragment>
