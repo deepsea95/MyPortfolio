@@ -41,23 +41,23 @@ function Footer() {
 		<div>
 			<hr style={{ width: '100%' }} />
 
-			<div className='p-4 '>
+			<div className="p-4 ">
 				<select>
 					<option>Italiano</option>
 					{/* <option>English</option>
 					<option>Français</option> */}
 				</select>
-				
+
 				{theme === 'light-mode' ? (
 					<button
-						style={{ backgroundColor: 'transparent', border: 'none', marginLeft:'15px'}}
+						style={{ backgroundColor: 'transparent', border: 'none', marginLeft: '15px' }}
 						onClick={cambiaTema}
 					>
 						<MdOutlineDarkMode color="black" size="30" />
 					</button>
 				) : (
 					<button
-						style={{ backgroundColor: 'transparent', border: 'none', marginLeft:'15px'}}
+						style={{ backgroundColor: 'transparent', border: 'none', marginLeft: '15px' }}
 						onClick={cambiaTema}
 					>
 						<MdOutlineLightMode color="white" size="30" />
@@ -71,7 +71,6 @@ function Footer() {
 				<div className="footer-link">
 					<Link to="/about">Riguardo Me</Link>
 					<Link to="/contact">Contatti</Link>
-					<Link to="/portfolio">Portfolio</Link>
 				</div>
 
 				<div className="icon-footer">

@@ -33,10 +33,6 @@ function Navbar() {
 						Esperienze
 					</Link>
 
-					<Link to="/portfolio" className="link">
-						Portfolio
-					</Link>
-
 					<Link to="/contact" className="link">
 						Contatti
 					</Link>

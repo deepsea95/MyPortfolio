@@ -259,6 +259,21 @@ section .avatar {
   transform: translate(6px, -7px);
 }
 
+@media all and (max-width: 414px) {
+  .job-section {
+    margin: 160px 45px;
+  }
+}
+@media all and (max-width: 390px) {
+  .job-section {
+    margin: 200px 45px;
+  }
+}
+@media all and (max-width: 375px) {
+  .job-section {
+    margin: 250px 45px;
+  }
+}
 select {
   background-color: transparent;
   color: var(--select-color);
@@ -289,6 +304,35 @@ footer .icon-footer {
   padding: 10px;
 }
 
+.main-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 100px;
+}
+
+.form-container {
+  display: flex;
+  align-items: center;
+}
+.form-container form {
+  width: 300px;
+  height: 640px;
+}
+.form-container form input {
+  height: 55px;
+}
+.form-container form .textarea {
+  height: 180px;
+}
+
+@media all and (max-width: 540px) {
+  .main-container {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+  }
+}
 * {
   box-sizing: border-box;
   padding: 0;

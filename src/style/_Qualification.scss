@@ -56,3 +56,22 @@
 		}
 	}
 }
+
+@media all and (max-width: 414px) {
+	.job-section {
+		margin: 160px 45px;
+	}
+}
+
+@media all and (max-width: 390px) {
+	.job-section {
+		margin: 200px 45px;
+	}
+}
+
+
+@media all and (max-width: 375px) {
+	.job-section {
+		margin: 250px 45px;
+	}
+}
