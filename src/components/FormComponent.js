@@ -18,7 +18,7 @@ function FormComponent() {
 			toast.success('messaggio inviato con successo');
 		}
 		try {
-			const { data } = await axios.post(`http://localhost:5000/api/sendMail`, {
+			const { data } = await axios.post(`http://localhost:5000/sendMail`, {
 				email,
 				subject,
 				message

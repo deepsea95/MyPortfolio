@@ -15,7 +15,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 app.use(cors());
 
-app.post('/api/sendMail', async (req: Request, res: Response) => {
+app.post('/sendMail', async (req: Request, res: Response) => {
     const { email, subject, message } = req.body;
 	const transporter = nodemailer.createTransport({
 		service: 'gmail',
