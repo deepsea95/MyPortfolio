@@ -41,12 +41,7 @@ function Footer() {
 		<div>
 			<hr style={{ width: '100%' }} />
 
-			<div className="p-4 ">
-				<select>
-					<option>Italiano</option>
-					{/* <option>English</option>
-					<option>Français</option> */}
-				</select>
+			<div className="p-3">
 
 				{theme === 'light-mode' ? (
 					<button
@@ -69,16 +64,16 @@ function Footer() {
 				<h1>Angelo</h1>
 
 				<div className="footer-link">
-					<Link to="/about">Riguardo Me</Link>
-					<Link to="/contact">Contatti</Link>
+					<Link to="/about" className='link'>Riguardo Me</Link>
+					<Link to="/contact" className='link'>Contatti</Link>
 				</div>
 
 				<div className="icon-footer">
-					<a href="https://www.linkedin.com/in/angelo-de-rosa-">
+					<a href="https://www.linkedin.com/in/angelo-de-rosa-" target='_blank' rel="noreferrer">
 						<CiLinkedin size="25" />
 					</a>
 
-					<a href="https://github.com/deepsea95">
+					<a href="https://github.com/deepsea95" target='_blank' rel="noreferrer">
 						<VscGithubAlt size="25" />
 					</a>
 				</div>
