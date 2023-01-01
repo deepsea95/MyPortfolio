@@ -4,6 +4,8 @@ import { Link } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import { MdOutlineLightMode } from 'react-icons/md';
 import { MdOutlineDarkMode } from 'react-icons/md';
+import LogoFooterNero from '../Assets/Logo-nero-footer.png';
+import LogoFooterBianco from '../Assets/Logo-bianco-footer.png';
 
 const getFromLocalStorage = () => {
 	if (localStorage.getItem('theme')) {
@@ -41,8 +43,7 @@ function Footer() {
 		<div>
 			<hr style={{ width: '100%' }} />
 
-			<div className="p-3">
-
+			<div className="ms-4">
 				{theme === 'light-mode' ? (
 					<button
 						style={{ backgroundColor: 'transparent', border: 'none', marginLeft: '15px' }}
@@ -61,20 +62,28 @@ function Footer() {
 			</div>
 
 			<footer>
-				<h1>Angelo</h1>
+				{theme === 'light-mode' ? (
+					<img width='10%' src={LogoFooterNero} alt="Logo-img" />
+				) : (
+					<img width='10%' src={LogoFooterBianco} alt="Logo-img" />
+				)}
 
 				<div className="footer-link">
-					<Link to="/about" className='link'>Riguardo Me</Link>
-					<Link to="/contact" className='link'>Contatti</Link>
+					<Link to="/about" className="link">
+						Riguardo Me
+					</Link>
+					<Link to="/contact" className="link">
+						Contatti
+					</Link>
 				</div>
 
 				<div className="icon-footer">
-					<a href="https://www.linkedin.com/in/angelo-de-rosa-" target='_blank' rel="noreferrer">
-						<CiLinkedin size="25" />
+					<a href="https://www.linkedin.com/in/angelo-de-rosa-" target="_blank" rel="noreferrer">
+						<CiLinkedin size="35" />
 					</a>
 
-					<a href="https://github.com/deepsea95" target='_blank' rel="noreferrer">
-						<VscGithubAlt size="25" />
+					<a href="https://github.com/deepsea95" target="_blank" rel="noreferrer">
+						<VscGithubAlt size="35" />
 					</a>
 				</div>
 			</footer>
