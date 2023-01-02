@@ -12,11 +12,11 @@ function Home() {
 			<section className="container">
 				<div className="icon">
 					<a href="https://www.linkedin.com/in/angelo-de-rosa-"  target="_blank" rel="noreferrer">
-						<CiLinkedin size="25" />
+						<CiLinkedin size="30" />
 					</a>
 
 					<a href="https://github.com/deepsea95"  target="_blank" rel="noreferrer">
-						<VscGithubAlt size="25" />
+						<VscGithubAlt size="30" />
 					</a>
 				</div>
 				<div>

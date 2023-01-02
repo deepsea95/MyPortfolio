@@ -51,7 +51,12 @@
   font-size: 1.8rem;
 }
 
-@media only screen and (max-width: 912px) {
+@media all and (min-width: 913px) {
+  .logo-width {
+    width: 25%;
+  }
+}
+@media only all and (max-width: 912px) {
   .nav-btn {
     visibility: visible;
     opacity: 1;
@@ -292,6 +297,9 @@ footer .icon-footer {
   gap: 20px;
   padding: 10px;
 }
+footer .footer-logo {
+  width: 10%;
+}
 footer .link {
   position: relative;
   display: inline-block;
@@ -313,6 +321,16 @@ footer .link:hover::before {
   scale: 1;
 }
 
+@media all and (max-width: 912px) {
+  .footer-logo {
+    width: 20% !important;
+  }
+}
+@media all and (max-width: 414px) {
+  .footer-logo {
+    width: 30% !important;
+  }
+}
 .main-container {
   display: flex;
   align-items: center;

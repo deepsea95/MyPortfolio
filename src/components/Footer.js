@@ -63,9 +63,9 @@ function Footer() {
 
 			<footer>
 				{theme === 'light-mode' ? (
-					<img width='10%' src={LogoFooterNero} alt="Logo-img" />
+					<img className='footer-logo' src={LogoFooterNero} alt="Logo-img" />
 				) : (
-					<img width='10%' src={LogoFooterBianco} alt="Logo-img" />
+					<img className='footer-logo' src={LogoFooterBianco} alt="Logo-img" />
 				)}
 
 				<div className="footer-link">

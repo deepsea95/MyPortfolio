@@ -14,9 +14,7 @@ function FormComponent() {
 		e.target.reset();
 		if (!email || !subject || !message) {
 			return toast.error('Si prega di compilare e-mail, oggetto e il messaggio');
-		} else {
-			toast.success('messaggio inviato con successo');
-		}
+		} 
 		try {
 			const { data } = await axios.post(`http://localhost:5000/sendMail`, {
 				email,

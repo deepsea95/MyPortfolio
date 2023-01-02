@@ -5,8 +5,6 @@ import cors from 'cors';
 import bodyParser from 'body-parser';
 const nodemailer = require('nodemailer');
 
-// const smtpTransport = require('nodemailer-smtp-transport');
-
 const app = express();
 
 const port = process.env.PORT || 5000;
@@ -16,12 +14,12 @@ app.use(bodyParser.json());
 app.use(cors());
 
 app.post('/sendMail', async (req: Request, res: Response) => {
-    const { email, subject, message } = req.body;
+	const { email, subject, message } = req.body;
 	const transporter = nodemailer.createTransport({
 		service: 'gmail',
 		host: process.env.MAIL_HOST,
 		port: process.env.MAIL_PORT,
-		// secure: false,
+		secure: false,
 		auth: {
 			user: process.env.MAIL_USER,
 			pass: process.env.MAIL_PASS
@@ -29,10 +27,13 @@ app.post('/sendMail', async (req: Request, res: Response) => {
 	});
 
 	await transporter.sendMail({
+		from: process.env.MAIL_USER,
 		to: process.env.MAIL_USER,
-		from: `${email}`,
 		subject: `${subject}`,
-		html: `<p>${message}</p>`
+		html: `<div>
+		       <p>Email: ${email}</p>
+		       <p>Messaggio: <br/> ${message}</p>
+			   </div>`
 	});
 });
 

@@ -2,23 +2,20 @@ import { useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { RxHamburgerMenu } from 'react-icons/rx';
 import { CgClose } from 'react-icons/cg';
-import LogoNavbarNero from '../Assets/logo-navbar-nero.png';
+// import LogoNavbarNero from '../Assets/logo-navbar-nero.png';
 import LogoNavbarBianco from '../Assets/logo-navbar-bianco.png';
 
-function Navbar({ theme }) {
+function Navbar() {
 	const navRef = useRef();
 
 	const showNavbar = () => {
 		navRef.current.classList.toggle('responsive_nav');
 	};
+
 	return (
 		<div className="nav-section ms-4">
-			<Link to="/">
-				{theme === 'light-mode' ? (
-					<img width="15%" src={LogoNavbarNero} alt="Logo-img" />
-				) : (
-					<img width="15%" src={LogoNavbarBianco} alt="Logo-img" />
-				)}
+			<Link to="/" className="logo-width">
+				<img width="20%" src={LogoNavbarBianco} alt="Logo-img" />
 			</Link>
 
 			<header>
