@@ -1,44 +1,35 @@
-import React, { useState } from 'react';
-import axios from 'axios';
+import React, { useRef } from 'react';
+import emailjs from '@emailjs/browser';
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { TbSend } from 'react-icons/tb';
 
-function FormComponent() {
-	const [ email, setEmail ] = useState('');
-	const [ subject, setSubject ] = useState('');
-	const [ message, setMessage ] = useState('');
+const FormComponent = () => {
+	const form = useRef();
 
-	const submitHandler = async (e) => {
+	const sendEmail = (e) => {
 		e.preventDefault();
-		e.target.reset();
-		if (!email || !subject || !message) {
-			return toast.error('Si prega di compilare e-mail, oggetto e il messaggio');
-		} 
-		try {
-			const { data } = await axios.post(`http://localhost:5000/sendMail`, {
-				email,
-				subject,
-				message
-			});
-			toast.success(data.message);
-		} catch (err) {
-			toast.error(err.response && err.response.data.message ? err.response.data.message : err.message);
-		}
+	
+		emailjs.sendForm('service_d9tgmpb', 'template_93uon8o', form.current, '1QfMwVHAr3d2rEc_D').then(
+			(result) => {
+				toast.success('messaggio inviato');
+			},
+			e.target.reset()
+		);
 	};
 
 	return (
 		<div className="form-container">
 			<ToastContainer position="top-center" limit={1} />
 
-			<form onSubmit={submitHandler}>
+			<form ref={form} onSubmit={sendEmail}>
 				<div class="mb-3">
 					<input
 						type="email"
 						placeholder="Email"
 						class="form-control shadow"
-						id="email"
-						onChange={(e) => setEmail(e.target.value)}
+						name="email"
+						// onChange={(e) => setEmail(e.target.value)}
 					/>
 				</div>
 				<div class="mb-3">
@@ -46,27 +37,38 @@ function FormComponent() {
 						type="text"
 						placeholder="Oggetto"
 						class="form-control shadow"
-						id="subject"
-						onChange={(e) => setSubject(e.target.value)}
+						name="subject"
+						// onChange={(e) => setSubject(e.target.value)}
 					/>
 				</div>
 				<div class="mb-3">
 					<textarea
-						id="message"
+						name="message"
 						placeholder="Messaggio"
 						class="form-control textarea shadow"
-						onChange={(e) => setMessage(e.target.value)}
+						// onChange={(e) => setMessage(e.target.value)}
 					/>
 				</div>
 				<div className="d-flex justify-content-center">
-					<button type="submit" className="BTN" style={{ width: '300px', height: '50px' }}>
+					<button type="submit" value="Send" className="BTN" style={{ width: '300px', height: '50px' }}>
 						Invia
 						<TbSend size="30" className="p-1" />
 					</button>
+					{/* <input type="submit" value="Send" className="BTN" style={{ width: '300px', height: '50px' }} /> */}
 				</div>
 			</form>
 		</div>
+
+		// <form ref={form} onSubmit={sendEmail}>
+		// 	<label>Name</label>
+		// 	<input type="text" name="subject" />
+		// 	<label>Email</label>
+		// 	<input type="email" name="email" />
+		// 	<label>Message</label>
+		// 	<textarea name="message" />
+		// 	<input type="submit" value="Send" />
+		// </form>
 	);
-}
+};
 
 export default FormComponent;
