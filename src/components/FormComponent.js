@@ -17,7 +17,7 @@ const FormComponent = () => {
 		} else {
 			setError(false);
 			try {
-				await emailjs.sendForm('service_d9tgmpb', 'template_93uon8o', form.current, '1QfMwVHAr3d2rEc_D');
+				await emailjs.sendForm('', '', form.current, '');
 				toast.success('Email inviata con successo');
 				e.target.reset()
 			} catch (error) {
