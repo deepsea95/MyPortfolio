@@ -1,6 +1,7 @@
 import { MdOutlineEmail } from 'react-icons/md';
-import { BsTelephone } from 'react-icons/bs';
 import { AiOutlineMessage } from 'react-icons/ai';
+import { HiArrowSmRight } from 'react-icons/hi';
+import {BsWhatsapp} from 'react-icons/bs';
 
 function ContactCard() {
 	return (
@@ -12,9 +13,12 @@ function ContactCard() {
 				<div>
 					<div className="card shadow p-3">
 						<div className="card-body text-center">
-							<BsTelephone size="25" />
-							<h5 className="card-title text-center mb-4 mt-3">Numero</h5>
+							<BsWhatsapp size="25" />
+							<h5 className="card-title text-center mb-4 mt-3">WhatsApp</h5>
 							<p>3455850034</p>
+							<a style={{ color: 'black' }} href="whatsapp://send?phone=+393455850034" target='_blank' rel="noreferrer">
+								Scrivimi <HiArrowSmRight />
+							</a>
 						</div>
 					</div>
 				</div>
@@ -24,6 +28,9 @@ function ContactCard() {
 							<MdOutlineEmail size="25" />
 							<h5 className="card-title text-center mb-4 mt-3">Email</h5>
 							<p>angelo.derosa95@gmail.com</p>
+							<a style={{ color: 'black' }} href="mailto:angelo.derosa95@gmail.com">
+								Scrivimi <HiArrowSmRight />
+							</a>
 						</div>
 					</div>
 				</div>
@@ -33,6 +40,9 @@ function ContactCard() {
 							<AiOutlineMessage size="25" />
 							<h5 className="card-title text-center mb-4 mt-3">Messanger</h5>
 							<p>angelo.derosa95</p>
+							<a style={{ color: 'black' }} href="https://m.me/angelo.derosa95" target='_blank' rel="noreferrer">
+								Scrivimi <HiArrowSmRight />
+							</a>
 						</div>
 					</div>
 				</div>
