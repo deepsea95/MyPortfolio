@@ -1,7 +1,7 @@
 import React from 'react';
-import ContactCard from '../components/ContactCard';
+import ContactCard from '../components/ContactComponents/ContactCard';
+import FormComponent from '../components/ContactComponents/FormComponent';
 import Footer from '../components/Footer';
-import FormComponent from '../components/FormComponent';
 import Navbar from '../components/Navbar';
 
 function Contact() {
