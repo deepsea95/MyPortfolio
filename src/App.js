@@ -8,6 +8,7 @@ import { ErrorPage } from './Pages/ErrorPage';
 import Contact from './Pages/Contact';
 import Qualification from './Pages/Qualification';
 import FullScreenComponent from './components/FullScreenComponent';
+import Project from './Pages/Project';
 
 function App() {
 	return (
@@ -20,7 +21,8 @@ function App() {
 					<Route path="/about" element={<About />} />
 					<Route path="/skills" element={<Skills />} />
 					<Route path="/contact" element={<Contact />} />
-					<Route path="/qualification" element={<Qualification />} />
+					<Route path="/experiences" element={<Qualification />} />
+				    <Route path='/project' element={<Project />} />
 				</Routes>
 			</Router>
 		</div>

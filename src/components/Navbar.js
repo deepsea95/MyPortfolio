@@ -35,6 +35,10 @@ function Navbar() {
             {t("skills")}
           </Link>
 
+          <Link to="/project" className="link">
+            {t("projects")}
+          </Link>
+
           <Link to="/qualification" className="link">
             {t("experience")}
           </Link>
