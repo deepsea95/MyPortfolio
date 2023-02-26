@@ -6,7 +6,7 @@ const Project = ({ imageUrl, productText, projectLink }) => {
   return (
     <div className="product" style={{ backgroundImage: `url(${imageUrl})` }}>
       <div className="productInfo">
-        <a to={projectLink}>
+        <a href={projectLink}>
           <p className="productText">{productText}</p>
         </a>
       </div>
@@ -36,7 +36,7 @@ function HoverCards() {
         <Project
           imageUrl="https://via.placeholder.com/150"
           productText="Color Grading"
-          projectLink=""
+          projectLink="https://color-grading-app.netlify.app/"
         />
 
         <Project
