@@ -6,6 +6,7 @@ import { MdOutlineLightMode } from "react-icons/md";
 import { MdOutlineDarkMode } from "react-icons/md";
 import LogoFooterNero from "../Assets/Logo-nero-footer.png";
 import LogoFooterBianco from "../Assets/Logo-bianco-footer.png";
+import { useTranslation } from "react-i18next";
 
 const getFromLocalStorage = () => {
   if (localStorage.getItem("theme")) {
@@ -16,6 +17,13 @@ const getFromLocalStorage = () => {
 };
 
 function Footer() {
+  const { t, i18n } = useTranslation();
+
+  const handleLanguageChange = (event) => {
+    const selectedLanguage = event.target.value;
+    i18n.changeLanguage(selectedLanguage);
+  };
+
   //Stato iniziale per la nostra modalità
   const [theme, setTheme] = useState(getFromLocalStorage());
 
@@ -40,7 +48,7 @@ function Footer() {
     <div>
       <hr style={{ width: "100%" }} />
 
-      <div className="ms-4">
+      <div className="d-flex gap-3 ms-4">
         {theme === "light-mode" ? (
           <button
             style={{
@@ -64,6 +72,12 @@ function Footer() {
             <MdOutlineLightMode color="white" size="30" />
           </button>
         )}
+
+        <select onChange={handleLanguageChange}>
+          <option value="en">English</option>
+          <option value="fr">Français</option>
+          <option value="it">Italiano</option>
+        </select>
       </div>
 
       <footer>
@@ -75,10 +89,10 @@ function Footer() {
 
         <div className="footer-link">
           <Link to="/about" className="link">
-            Riguardo Me
+            {t("about")}
           </Link>
           <Link to="/contact" className="link">
-            Contatti
+            {t("contact")}
           </Link>
         </div>
 

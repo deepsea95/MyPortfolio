@@ -3,8 +3,11 @@ import emailjs from "@emailjs/browser";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { TbSend } from "react-icons/tb";
+import { useTranslation } from "react-i18next";
 
 const FormComponent = () => {
+  const { t } = useTranslation();
+
   const form = useRef(null);
   const [error, setError] = useState(false);
 
@@ -51,7 +54,7 @@ const FormComponent = () => {
         <div class="mb-3">
           <input
             type="text"
-            placeholder="Oggetto"
+            placeholder={t("object")}
             class="form-control shadow"
             name="subject"
           />
@@ -59,7 +62,7 @@ const FormComponent = () => {
         <div class="mb-3">
           <textarea
             name="message"
-            placeholder="Messaggio"
+            placeholder={t("message")}
             class="form-control textarea shadow"
           />
         </div>
@@ -70,7 +73,7 @@ const FormComponent = () => {
             className="BTN"
             style={{ width: "300px", height: "50px" }}
           >
-            Invia
+            {t("send")}
             <TbSend size="30" className="p-1" />
           </button>
         </div>

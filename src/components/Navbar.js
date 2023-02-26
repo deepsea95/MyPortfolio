@@ -2,10 +2,13 @@ import { useRef } from "react";
 import { Link } from "react-router-dom";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { CgClose } from "react-icons/cg";
+import { useTranslation } from "react-i18next";
 // import LogoNavbarNero from '../Assets/logo-navbar-nero.png';
 import LogoNavbarBianco from "../Assets/logo-navbar-bianco.png";
 
 function Navbar() {
+  const { t } = useTranslation();
+
   const navRef = useRef();
 
   const showNavbar = () => {
@@ -25,19 +28,19 @@ function Navbar() {
           </Link>
 
           <Link to="/about" className="link">
-            Riguardo me
+            {t("about")}
           </Link>
 
           <Link to="/skills" className="link">
-            Competenze
+            {t("skills")}
           </Link>
 
           <Link to="/qualification" className="link">
-            Esperienze
+            {t("experience")}
           </Link>
 
           <Link to="/contact" className="link">
-            Contatti
+            {t("contact")}
           </Link>
 
           <button className="nav-btn nav-close-btn" onClick={showNavbar}>

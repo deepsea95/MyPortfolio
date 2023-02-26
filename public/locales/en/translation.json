@@ -1,0 +1,13 @@
+{
+    "about": "About me",
+    "skills": "Skills",
+    "experience": "Experiences",
+    "contact": "Contact",
+    "projects": "Projects",
+    "aboutDescription" : "Jr Developer - lover of technology, PCs and video games. After working for years in various areas I decided to make a change in my life, dedicating myself to the study of web development thus acquiring new skills, training myself through an intensive course proposed by Develhope, in which I learned the development FE / BE / FS, with Html, CSS, SASS, Javascript, to use Git and I acquired the necessary skills on TypeScript. In the second part I deepened all the essential elements to develop software in React and I developed a real web application with agile methodologies.",
+    "writeMe" : "Write me",
+    "object" : "Object",
+    "message" : "Message",
+    "send" : "Send",
+    "homeDescription": "I am a Jr Developer located in Naples, and I am very passionate and dedicated to my work."
+}

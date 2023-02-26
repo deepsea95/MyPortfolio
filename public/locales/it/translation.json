@@ -1,0 +1,13 @@
+{
+    "about": "Riguardo me",
+    "skills": "Competenze",
+    "experience": "Esperienze",
+    "contact": "Contatti",
+    "projects": "Progetti",
+    "aboutDescription" : "Jr Developer - amante della tecnologia , dei PC e dei videogame. Dopo aver lavorato per anni in vari ambiti ho deciso di dare una svolta alla mia vita, dedicandomi allo studio dello sviluppo web acquisendo quindi nuove competenze, formandomi tramite un corso intensivo proposto da Develhope, nel quale ho imparato lo sviluppo FE/BE/FS, con Html, CSS, SASS, Javascript, ad utilizzare Git e ho acquisito le competenze necessarie su TypeScript. Nella seconda parte ho approfondito tutti gli elementi essenziali per sviluppare software in React e ho sviluppato una vera applicazione web con metodologie agile.",
+    "writeMe" : "Scrivimi",
+    "object" : "Oggetto",
+    "message" : "Messaggio",
+    "send" : "Invia",
+    "homeDescription": "Sono un Jr Developer situato a Napoli, e sono molto appassionato e dedito al mio lavoro."
+}

@@ -1,7 +1,11 @@
+import { useTranslation } from "react-i18next";
+
 function QualificationComponent() {
+  const { t } = useTranslation();
+
   return (
     <div>
-      <h1 className="d-flex justify-content-center mb-5">Esperienze</h1>
+      <h1 className="d-flex justify-content-center mb-5">{t("experience")}</h1>
       <div className="job-section">
         <div className="job-container">
           <div className="job-content one">

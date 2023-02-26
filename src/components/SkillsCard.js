@@ -1,9 +1,12 @@
 import { BsPatchCheckFill } from "react-icons/bs";
+import { useTranslation } from "react-i18next";
 
 function SkillsCard() {
+  const { t } = useTranslation();
+
   return (
     <div>
-      <h1 className="d-flex justify-content-center mb-5">Competenze</h1>
+      <h1 className="d-flex justify-content-center mb-5">{t("skills")}</h1>
       <div
         className="skills-section d-flex justify-content-center text-dark"
         style={{ gap: "30px", flexWrap: "wrap" }}

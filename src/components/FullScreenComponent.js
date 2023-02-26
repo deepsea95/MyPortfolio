@@ -15,7 +15,7 @@ function FullScreenComponent() {
     <div className="fullScreen-section text-light">
       <div class="position-fixed top-50" style={{ width: "100%" }}>
         <h4 className="text-fullScreen">ANGELO DE ROSA</h4>
-        <p className="text-fullScreen">Jr Full Stack Developer</p>
+        <p className="text-fullScreen">Jr Developer</p>
       </div>
     </div>
   );

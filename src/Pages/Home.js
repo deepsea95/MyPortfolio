@@ -4,8 +4,11 @@ import { CiLinkedin } from 'react-icons/ci';
 import { VscGithubAlt } from 'react-icons/vsc';
 import Footer from '../components/Footer';
 import ImgProfile from '../Assets/profile-pic.png';
+import { useTranslation } from 'react-i18next';
 
 function Home() {
+	const { t } = useTranslation();
+
 	return (
 		<React.Fragment>
 			<Navbar />
@@ -21,10 +24,9 @@ function Home() {
 				</div>
 				<div>
 					<h1 className="title">Angelo De Rosa</h1>
-					<h4 className="subtitle">Jr Full Stack Developer</h4>
+					<h3 className="subtitle">Jr Developer</h3>
 					<p>
-						Sono un Jr Full Stack Developer situato a Napoli, <br />
-						e sono molto appassionato e dedito al mio lavoro.
+						{t("homeDescription")}
 					</p>
 				</div>
 				<img className="avatar" src={ImgProfile} alt='img-profile'/>
